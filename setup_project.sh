@@ -11,7 +11,7 @@ File_Configuration="attendance_tracker_v1/Helpers/config.json"
 echo "Do you want to update attendance thresholds? (y/n)"
 read answer
 
-if [ "$answer"="y" ]; then
+if [ "$answer" = "y" ]; then
 
         echo "Enter Warning Threshold (default 75%):"
         read warning
@@ -27,4 +27,27 @@ if [ "$answer"="y" ]; then
           echo "Thresholds updated successfully!"
     else
     echo "No changes made."
+fi
+
+cleanup(){
+	echo "Backing up progress..."
+	archive_name="attendance_tracker_v1_archive.tar.gz"
+	tar -czf "$archive_name" "attendance_tracker_v1"
+	echo "Progress archived as $archive_name"
+	rm -rf "attendance_tracker_v1"
+	echo "Unfinished directory deleted"
+	exit 1
+}
+trap cleanup SIGINT
+echo "Loading..."
+sleep 6 #simulate long work
+echo "Done successfully"
+
+echo "Running Health Check..."
+echo "Scanning for Python3..."
+
+if python3 --version>/dev/null 2>&1; then
+	echo "Python3 is installed."
+else
+	echo "Warning: Python3 is NOT installed."
 fi
