@@ -7,11 +7,11 @@ touch attendance_tracker_v1/Helpers/config.json
 mkdir attendance_tracker_v1/reports
 touch attendance_tracker_v1/reports/reports.log
 
-File_Configuration="config.json"
-echo "Do you want to update attendance thresholds? (Y/N)"
+File_Configuration="attendance_tracker_v1/Helpers/config.json"
+echo "Do you want to update attendance thresholds? (y/n)"
 read answer
 
-if ["$answer"="Y"]; then
+if [ "$answer"="y" ]; then
 
         echo "Enter Warning Threshold (default 75%):"
         read warning
@@ -25,6 +25,6 @@ if ["$answer"="Y"]; then
           sed -i '/"thresholds": {/,/}/ s/"warning": *[0-9]\+/"warning": '"$warning"'/' "$File_Configuration"
           sed -i '/"thresholds": {/,/}/ s/"failure": *[0-9]\+/"failure": '"$failure"'/' "$File_Configuration"
           echo "Thresholds updated successfully!"
-          else
+    else
     echo "No changes made."
 fi
