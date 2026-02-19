@@ -10,7 +10,7 @@ This project is aimed at creating a master shell script (setup_project.sh) that 
 
 DIRECTORY STRUCTURE CREATION
 
-Once the script is run, it creates the parent directory, attendance_tracker_{input}; where {input} is the project name determined by the user. Then it creates the branch directories and files as follows:
+Once the script is run, it creates the parent directory, attendance_tracker_{input}; where {input} is the project name determined by the user. Then, it creates the branch directories and files as follows:
 
 -attendance_tracker_{input}/
  1. attendance_checker.py
@@ -31,7 +31,7 @@ To check that python3 is installed, the script uses: "python3 --version" and the
 RUNNING THE SCRIPT
 
 1. Change commands to make script executable using:
-
+```bash
 chmod +x setup_project.sh
 
 2. Run the script using either:
