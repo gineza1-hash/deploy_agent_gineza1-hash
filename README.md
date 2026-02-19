@@ -46,7 +46,7 @@ bash setup_project.sh
 
 - Enter directory name.
 - Select Yes or No to update attendance thresholds.
-- Wait for the setup complete.
+- Wait for the setup to complete.
 
 DYNAMIC CONFIGURATION
 
