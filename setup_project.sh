@@ -2,12 +2,12 @@
 read -p "Type Directory Name: " input 
 project_dir=attendance_tracker_$input
 echo "${project_dir}"
-mkdir $project_dir
+mkdir -p $project_dir
 touch $project_dir/attendance_checker.py
-mkdir $project_dir/Helpers
+mkdir -p $project_dir/Helpers
 touch $project_dir/Helpers/assets.csv
 touch $project_dir/Helpers/config.json
-mkdir $project_dir/reports
+mkdir -p $project_dir/reports
 touch $project_dir/reports/reports.log
 
 File_Configuration="$project_dir/Helpers/config.json"
