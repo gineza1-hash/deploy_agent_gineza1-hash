@@ -1,6 +1,6 @@
-*ATTENDANCE TRACKER SCRIPT
+ATTENDANCE TRACKER SCRIPT
 
-*PROJECT OVERVIEW
+PROJECT OVERVIEW
 
 This project is aimed at creating a master shell script (setup_project.sh) that automates the creation and enables editing of an attendance tracking application directory. The script:
 1. Creates a parent directory named attendance_tracker_{input}.
@@ -8,7 +8,7 @@ This project is aimed at creating a master shell script (setup_project.sh) that 
 3. Performs an environment validation health check.
 4. Implements a signal trap to handle user interrupts.
 
-*DIRECTORY STRUCTURE CREATION
+DIRECTORY STRUCTURE CREATION
 
 Once the script is run, it creates the parent directory, attendance_tracker_{input}; where {input} is the project name determined by the user. Then it creates the branch directories and files as follows:
 
@@ -20,7 +20,7 @@ attendance_tracker_{input}/
 └── reports/
     └── reports.log
 
-*REQUIREMENTS
+REQUIREMENTS
 
 1. Linux
 2. Bash shell
@@ -28,7 +28,7 @@ attendance_tracker_{input}/
 
 To check that python3 is installed, the script uses: "python3 --version" and then prints a successful message if it is and a warning if not.
 
-*RUNNING THE SCRIPT
+RUNNING THE SCRIPT
 
 1. Change commands to make script executable using:
 
@@ -48,7 +48,7 @@ bash setup_project.sh
 - Select Yes or No to update attendance thresholds.
 - Wait for the setup complete.
 
-*DYNAMIC CONFIGURATION
+DYNAMIC CONFIGURATION
 
 Once the script prompts to choose whether user wants to update attendance thresholds and the user accepts yes, the script will ask for:
 1. The Warning percentage and inform user that the default is 75%.
@@ -56,7 +56,7 @@ Once the script prompts to choose whether user wants to update attendance thresh
 
 Then, it will use the "sed" command to edit the "config.json" file to change the values inside and in-place. Meaning that it will change the actual file not a copy of it.
 
-*PROCESS MANAGEMENT (THE TRAP)
+PROCESS MANAGEMENT (THE TRAP)
 
 The trap that our script uses is "Ctrl + C" also known as a SIGINT.
 If the user stops midway during the execution of the script by pressing the SIGINT;
@@ -74,7 +74,7 @@ How to Test the Archive Feature
 - Press Ctrl + C
 - Confirm that an archive is created and the incomplete folder is removed.
 
-*ENVIRONMENT VALIDATION/HEALTH CHECK
+ENVIRONMENT VALIDATION/HEALTH CHECK
 
 Before finalizing the whole setup, the script verifies that python3 is installed and that the correct directory structure exists.
 
