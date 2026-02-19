@@ -2,7 +2,7 @@ ATTENDANCE TRACKER SCRIPT
 
 PROJECT OVERVIEW
 
-This project is aimed at creating a master shell script (setup_project.sh) that automates the creation and enables editing of an attendance tracking application directory.The script:
+This project is aimed at creating a master shell script (setup_project.sh) that automates the creation and enables editing of an attendance tracking application directory. The script:
 1. Creates a parent directory named attendance_tracker_{input}.
 2. Allows dynamic configuration of the files and editing.
 3. Performs an environment validation health check.
@@ -10,7 +10,7 @@ This project is aimed at creating a master shell script (setup_project.sh) that 
 
 DIRECTORY STRUCTURE CREATION
 
-Once the script is run, it creates the parent directory, attendance_tracker_{input}; where {input} is the project name determined by the user.Then it creates the branch directories and files as follows:
+Once the script is run, it creates the parent directory, attendance_tracker_{input}; where {input} is the project name determined by the user. Then it creates the branch directories and files as follows:
 
 attendance_tracker_{input}/
 ├── attendance_checker.py
@@ -45,7 +45,9 @@ bash setup_project.sh
 3. Follow the following prompts:
 
 -Enter directory name.
+
 -Select Yes or No to update attendance thresholds.
+
 -Wait for the setup complete.
 
 DYNAMIC CONFIGURATION
