@@ -51,7 +51,7 @@ bash setup_project.sh
 DYNAMIC CONFIGURATION
 
 Once the script prompts to choose whether user wants to update attendance thresholds and the user accepts yes, the script will ask for:
-1. The Warning percentage and inform user that the default is 75%.
+1. The Warning percentage and inform the user that the default is 75%.
 2. The Failure percentage and inform the user that the default is 50%.
 
 Then, it will use the "sed" command to edit the "config.json" file to change the values inside and in-place. Meaning that it will change the actual file not a copy of it.
@@ -61,7 +61,7 @@ PROCESS MANAGEMENT (THE TRAP)
 The trap that our script uses is "Ctrl + C" also known as a SIGINT.
 If the user stops midway during the execution of the script by pressing the SIGINT;
 1. The signal is caught.
-2. The directory is archived as: 
+2. The directory is archived in a ".tar.gz" or ".zip" file named: 
 
 "attendance_tracker_{input}_archive"
 
