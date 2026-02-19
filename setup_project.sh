@@ -33,17 +33,25 @@ if [ "$answer" = "y" ]; then
 fi
 
 cleanup(){
+	echo ""
 	echo "Backing up progress..."
-	archive_name="$project_dir_archive.tar.gz"
+	
+	if [ -d "$project_dir" ]; then
+	archive_name="${project_dir}_archive.tar.gz"
 	tar -czf "$archive_name" "$project_dir"
 	echo "Progress archived as $archive_name"
 	rm -rf "$project_dir"
-	echo "Unfinished directory deleted"
+	echo "Archive created and unfinished directory deleted."
+else
+	echo "No directory found to archive."
+	
+	fi
+
 	exit 1
 }
 trap cleanup SIGINT
 echo "Loading..."
-sleep 6 #simulate long work
+sleep 5 #simulate long work
 echo "Done successfully"
 
 echo "Running Health Check..."
