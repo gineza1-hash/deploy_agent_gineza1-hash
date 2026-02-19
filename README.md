@@ -12,8 +12,8 @@ DIRECTORY STRUCTURE CREATION
 
 Once the script is run, it creates the parent directory, attendance_tracker_{input}; where {input} is the project name determined by the user.Then it creates the branch directories and files as follows:
 
+```text
 attendance_tracker_{input}/
-│
 ├── attendance_checker.py
 ├── Helpers/
 │   ├── assets.csv
@@ -26,17 +26,25 @@ REQUIREMENTS
 1. Linux
 2. Bash shell
 3. python3
--To check that python3 is installed, the script uses: "python3 --version" and then prints a successful message if it is and a warning if not.
+
+To check that python3 is installed, the script uses: "python3 --version" and then prints a successful message if it is and a warning if not.
 
 RUNNING THE SCRIPT
 
 1. Change commands to make script executable using:
--chmod +x setup_project.sh
+
+chmod +x setup_project.sh
+
 2. Run the script using either:
--./setup_project.sh
+
+./setup_project.sh
+
 or
--bash setup_project.sh
+
+bash setup_project.sh
+
 3. Follow the following prompts:
+
 -Enter directory name.
 -Select Yes or No to update attendance thresholds.
 -Wait for the setup complete.
