@@ -33,7 +33,6 @@ if [ "$answer" = "y" ]; then
 fi
 
 cleanup(){
-	echo ""
 	echo "Backing up progress..."
 	
 	if [ -d "$project_dir" ]; then
