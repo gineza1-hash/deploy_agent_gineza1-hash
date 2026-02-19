@@ -1,3 +1,5 @@
+```text
+
 ATTENDANCE TRACKER SCRIPT
 
 PROJECT OVERVIEW
@@ -12,7 +14,6 @@ DIRECTORY STRUCTURE CREATION
 
 Once the script is run, it creates the parent directory, attendance_tracker_{input}; where {input} is the project name determined by the user.Then it creates the branch directories and files as follows:
 
-```text
 attendance_tracker_{input}/
 ├── attendance_checker.py
 ├── Helpers/
