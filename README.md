@@ -12,13 +12,13 @@ DIRECTORY STRUCTURE CREATION
 
 Once the script is run, it creates the parent directory, attendance_tracker_{input}; where {input} is the project name determined by the user. Then it creates the branch directories and files as follows:
 
-attendance_tracker_{input}/
-├── attendance_checker.py
-├── Helpers/
-│   ├── assets.csv
-│   └── config.json
-└── reports/
-    └── reports.log
+- attendance_tracker_{input}/
+1. attendance_checker.py
+2. Helpers/
+- assets.csv
+- config.json
+3. reports/
+- reports.log
 
 REQUIREMENTS
 
