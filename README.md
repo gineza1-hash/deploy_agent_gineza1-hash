@@ -26,26 +26,27 @@ REQUIREMENTS
 1. Linux
 2. Bash shell
 3. python3
-To check that python3 is installed, the script uses: "python3 --version" and then prints a successful message if it is and a warning if not.
+-To check that python3 is installed, the script uses: "python3 --version" and then prints a successful message if it is and a warning if not.
 
 RUNNING THE SCRIPT
 
 1. Change commands to make script executable using:
-*chmod +x setup_project.sh
+-chmod +x setup_project.sh
 2. Run the script using either:
-*./setup_project.sh
+-./setup_project.sh
 or
-*bash setup_project.sh
+-bash setup_project.sh
 3. Follow the following prompts:
-*Enter directory name.
-*Select Yes or No to update attendance thresholds.
-*Wait for the setup complete.
+-Enter directory name.
+-Select Yes or No to update attendance thresholds.
+-Wait for the setup complete.
 
 DYNAMIC CONFIGURATION
 
 Once the script prompts to choose whether user wants to update attendance thresholds and the user accepts yes, the script will ask for:
 1. The Warning percentage and inform user that the default is 75%.
 2. The Failure percentage and inform the user that the default is 50%.
+
 Then, it will use the "sed" command to edit the "config.json" file to change the values inside and in-place. Meaning that it will change the actual file not a copy of it.
 
 PROCESS MANAGEMENT (THE TRAP)
