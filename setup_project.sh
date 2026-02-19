@@ -1,13 +1,16 @@
 #!/bin/bash
-mkdir attendance_tracker_v1
-touch attendance_tracker_v1/attendance_checker.py
-mkdir attendance_tracker_v1/Helpers
-touch attendance_tracker_v1/Helpers/assets.csv
-touch attendance_tracker_v1/Helpers/config.json
-mkdir attendance_tracker_v1/reports
-touch attendance_tracker_v1/reports/reports.log
+read -p "Type Directory Name: " input 
+project_dir=attendance_tracker_$input
+echo "${project_dir}"
+mkdir $project_dir
+touch $project_dir/attendance_checker.py
+mkdir $project_dir/Helpers
+touch $project_dir/Helpers/assets.csv
+touch $project_dir/Helpers/config.json
+mkdir $project_dir/reports
+touch $project_dir/reports/reports.log
 
-File_Configuration="attendance_tracker_v1/Helpers/config.json"
+File_Configuration="$project_dir/Helpers/config.json"
 echo "Do you want to update attendance thresholds? (y/n)"
 read answer
 
@@ -31,10 +34,10 @@ fi
 
 cleanup(){
 	echo "Backing up progress..."
-	archive_name="attendance_tracker_v1_archive.tar.gz"
-	tar -czf "$archive_name" "attendance_tracker_v1"
+	archive_name="$project_dir_archive.tar.gz"
+	tar -czf "$archive_name" "$project_dir"
 	echo "Progress archived as $archive_name"
-	rm -rf "attendance_tracker_v1"
+	rm -rf "$project_dir"
 	echo "Unfinished directory deleted"
 	exit 1
 }
