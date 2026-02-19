@@ -78,4 +78,4 @@ ENVIRONMENT VALIDATION/HEALTH CHECK
 
 Before finalizing the whole setup, the script verifies that python3 is installed and that the correct directory structure exists.
 
-For more information and explanation, here is a demonstration video: 
+For more information and explanation, here is a demonstration video: https://youtu.be/3wNaVMXTYkM
