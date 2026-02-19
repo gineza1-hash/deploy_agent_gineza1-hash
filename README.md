@@ -31,7 +31,7 @@ To check that python3 is installed, the script uses: "python3 --version" and the
 RUNNING THE SCRIPT
 
 1. Change commands to make script executable using:
-```bash
+
 chmod +x setup_project.sh
 
 2. Run the script using either:
